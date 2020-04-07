@@ -5,30 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
+    //Time to wait
+    [SerializeField] int intTimeToWait = 4;
+    int intCurrentSceneIndex;
 
-    [SerializeField] int timeToWait = 4;
-    int currentSceneIndex;
-
-    // Use this for initialization
+    // Start
     void Start()
     {
-        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        if (currentSceneIndex == 0)
-        {
+        intCurrentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (intCurrentSceneIndex == 0)
+        {//If
             StartCoroutine(WaitForTime());
-        }
+        }//Indicates the current scene.
     }
 
     IEnumerator WaitForTime()
     {
-        yield return new WaitForSeconds(timeToWait);
+        yield return new WaitForSeconds(intTimeToWait);
         LoadNextScene();
-    }
+    } //Loads the Next Scene after waiting intTimeToWait amount of seconds.
 
     public void LoadNextScene()
     {
-        SceneManager.LoadScene(currentSceneIndex + 1);
-    }
+        SceneManager.LoadScene(intCurrentSceneIndex + 1);
+    }//Load Next Scene
 
     // Update is called once per frame
     void Update()
