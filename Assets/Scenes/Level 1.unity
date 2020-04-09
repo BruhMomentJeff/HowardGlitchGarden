@@ -597,6 +597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fltHealth: 100
+  deathVFX: {fileID: 1906222994913036, guid: 740c2b3187d56c341b8cb78e8aa925c5, type: 3}
 --- !u!1 &2065895873 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2574070159617661138, guid: 12cec76ed5f536f49889c4c84638dfff,

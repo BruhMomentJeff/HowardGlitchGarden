@@ -18,8 +18,18 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D otherCollider)
     {
         var Health = otherCollider.GetComponent<Health>();
-        //Reducing Health
-        Health.DealDamage(fltDamage);
+        //Reducing Health after getting it from the 'other thing' that was collided with
+        var Attacker = otherCollider.GetComponent<Attacker>();
+
+        //Determines if the 'other thing' is an Attacker role and also has Health to drain
+        if(Attacker && Health)
+        {
+            //Deals an amount of damage based of fltDamage
+            Health.DealDamage(fltDamage);
+            Destroy(gameObject);
+            //Destroys the game object
+        }
+        
     }
 
 
