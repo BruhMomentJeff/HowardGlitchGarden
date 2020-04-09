@@ -27,7 +27,7 @@ public class Projectile : MonoBehaviour
             //Deals an amount of damage based of fltDamage
             Health.DealDamage(fltDamage);
             Destroy(gameObject);
-            //Destroys the game object
+            //Destroys the game object that has been collided with
         }
         
     }
