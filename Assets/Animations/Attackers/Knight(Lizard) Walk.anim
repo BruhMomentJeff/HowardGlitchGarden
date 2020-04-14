@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Knight (Lizard) Walk
+  m_Name: Knight(Lizard) Walk
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -22,32 +22,32 @@ AnimationClip:
     - time: 0
       value: {fileID: 4944230376442633554, guid: e43d765356daa834ead5e119fd256296,
         type: 3}
-    - time: 0.071428575
+    - time: 0.041666668
       value: {fileID: -2274363484027164459, guid: e43d765356daa834ead5e119fd256296,
         type: 3}
-    - time: 0.14285715
+    - time: 0.083333336
       value: {fileID: 8284087734974297348, guid: e43d765356daa834ead5e119fd256296,
         type: 3}
-    - time: 0.21428572
+    - time: 0.125
       value: {fileID: 5304202850863732263, guid: e43d765356daa834ead5e119fd256296,
         type: 3}
-    - time: 0.2857143
+    - time: 0.16666667
       value: {fileID: 2833043080597125133, guid: e43d765356daa834ead5e119fd256296,
         type: 3}
-    - time: 0.35714287
+    - time: 0.20833333
       value: {fileID: -2217414122262695004, guid: e43d765356daa834ead5e119fd256296,
         type: 3}
-    - time: 0.42857143
+    - time: 0.25
       value: {fileID: -4440497016933152808, guid: e43d765356daa834ead5e119fd256296,
         type: 3}
-    - time: 0.5
+    - time: 0.29166666
       value: {fileID: 8676454946275842879, guid: e43d765356daa834ead5e119fd256296,
         type: 3}
     attribute: m_Sprite
-    path: 
+    path: Body
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 14
+  m_SampleRate: 24
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -55,7 +55,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 2073732236
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -75,7 +75,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5714286
+    m_StopTime: 0.3333333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -99,6 +99,6 @@ AnimationClip:
     functionName: SetMovementSpeed
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 1.25
+    floatParameter: 1
     intParameter: 0
     messageOptions: 0
