@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 904669969491164362}
   - component: {fileID: 904669969491164361}
+  - component: {fileID: 3955590800361764280}
   m_Layer: 0
   m_Name: Trophy
   m_TagString: Untagged
@@ -52,6 +53,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3955590800361764280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904669969491164360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b7c0c36850c904a893c76004d80141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intStarCost: 100
 --- !u!1 &904669969583378485
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,8 +91,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904669969583378485}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.49, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.38, z: 0}
+  m_LocalScale: {x: 0.7806197, y: 0.7806197, z: 0.7806197}
   m_Children: []
   m_Father: {fileID: 904669969491164362}
   m_RootOrder: 0
@@ -159,7 +173,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904669969975703016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 904669969491164362}

@@ -121,12 +121,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &2241649 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5078692684953252561, guid: 52da978409c1677429b8943b7750007b,
+--- !u!114 &2241650 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8766295324072451222, guid: 52da978409c1677429b8943b7750007b,
     type: 3}
   m_PrefabInstance: {fileID: 917626354870241659}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b7c0c36850c904a893c76004d80141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &216474699 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2574070159617661138, guid: 12cec76ed5f536f49889c4c84638dfff,
@@ -199,6 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20932fe611917f04b95464958dfd341c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defenderPrefab: {fileID: 1077566432}
 --- !u!61 &280326381
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -470,7 +477,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9405f94d5228d04280ab08a2fd0898d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defender: {fileID: 2241649}
 --- !u!61 &472087546
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -719,6 +725,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 369768023}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1077566432 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3955590800361764280, guid: 2f2fa9fc3bf66eb4f996424bd3a5211a,
+    type: 3}
+  m_PrefabInstance: {fileID: 904669969482082828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b7c0c36850c904a893c76004d80141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1098425165
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,6 +913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20932fe611917f04b95464958dfd341c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defenderPrefab: {fileID: 2241650}
 --- !u!61 &1166784779
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1153,12 +1172,12 @@ PrefabInstance:
     - target: {fileID: 904669969491164362, guid: 2f2fa9fc3bf66eb4f996424bd3a5211a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 904669969491164362, guid: 2f2fa9fc3bf66eb4f996424bd3a5211a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.77
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 904669969491164362, guid: 2f2fa9fc3bf66eb4f996424bd3a5211a,
         type: 3}

@@ -3,14 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DefenderSpawner : MonoBehaviour
-{   //Allows us to use any defender we drag into this field for spawning.
-    [SerializeField] GameObject defender;
+{   
+    Defender defender;
 
     //detects when mouse has been clicked and will 'SpawnDefender'
     private void OnMouseDown()
     {
         SpawnDefender(GetSquareClicked());
     }//calls GetSquaredClicked to gather the position for the spawned defender when mouse is clicked
+
+    //Whatever gets passed in is now assigned to defenderToSelect.
+    public void SetSelectedDefender(Defender defenderToSelect)
+    {
+        defender = defenderToSelect;
+    }
+
 
     //Determines where the user clicked inside the collision box provided.
     private Vector2 GetSquareClicked()
@@ -39,7 +46,7 @@ public class DefenderSpawner : MonoBehaviour
     //On click will spawn Cactus
     private void SpawnDefender(Vector2 roundedPos)
     {
-        GameObject newDefender = Instantiate(defender, roundedPos, Quaternion.identity) as GameObject;
+        Defender newDefender = Instantiate(defender, roundedPos, Quaternion.identity) as Defender;
         Debug.Log(roundedPos);
     }
 
