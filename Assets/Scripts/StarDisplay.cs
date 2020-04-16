@@ -20,12 +20,18 @@ public class StarDisplay : MonoBehaviour
         strStarText.text = intStars.ToString();
     }
     
+    //Checks if you have enough stars to spend.
+    public bool boolHaveEnoughStars(int intAmount)
+    {
+        return intStars >= intAmount;
+    }
+    //Adds stars based on amount allotted
     public void AddStars(int intAmount)
     {
         intStars += intAmount;
         UpdateDisplay();
     }
-
+    //Spends stars based on amount specified
     public void SpendStars(int intAmount)
     {
         if (intStars >= intAmount) ;

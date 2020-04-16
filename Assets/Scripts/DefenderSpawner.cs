@@ -6,10 +6,10 @@ public class DefenderSpawner : MonoBehaviour
 {   
     Defender defender;
 
-    //detects when mouse has been clicked and will 'SpawnDefender'
+    //detects when mouse has been clicked and will 'Attempt to place a defender' where clicked based on it's method of an if statement.
     private void OnMouseDown()
     {
-        SpawnDefender(GetSquareClicked());
+        AttemptToPlaceDefenderAt(GetSquareClicked());
     }//calls GetSquaredClicked to gather the position for the spawned defender when mouse is clicked
 
     //Whatever gets passed in is now assigned to defenderToSelect.
@@ -18,6 +18,16 @@ public class DefenderSpawner : MonoBehaviour
         defender = defenderToSelect;
     }
 
+    private void AttemptToPlaceDefenderAt(Vector2 gridPos)
+    {
+        var StarDisplay = FindObjectOfType<StarDisplay>();
+        int intDefenderCost = defender.intGetStarCost();
+        if (StarDisplay.boolHaveEnoughStars(intDefenderCost))
+        {
+            SpawnDefender(gridPos);
+            StarDisplay.SpendStars(intDefenderCost);
+        }//If spawn successful, you will spend the allotted (100 in this case) stars.
+    }
 
     //Determines where the user clicked inside the collision box provided.
     private Vector2 GetSquareClicked()
