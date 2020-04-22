@@ -7,22 +7,25 @@ public class Shooter : MonoBehaviour
     //Gives us fields to select and drag assets into, to make the code operate properly.
     [SerializeField] GameObject projectile, gun;
     AttackerSpawner myLaneSpawner;
+    Animator animator;
 
     private void Start()
     {
         SetLaneSpawner();
+        //Gets the animator component
+        animator = GetComponent<Animator>();
     }
 
-    //Checks for Attackers in the same lane and prompts messages in the console, if or if not.
+    //Checks for Attackers in the same lane and changes the 'isAttacking' statement made in the animator, with true or false.
     private void Update()
     {
         if(IsAttackerInLane())
         {
-            Debug.Log("Target Found");
+            animator.SetBool("IsAttacking", true);
         }
         else
         {
-            Debug.Log("No one is there..");
+            animator.SetBool("IsAttacking", false);
         }
     }
     //Useful for finding all our spawners based on their AttackerSpawner scripts and puts them into an array.
