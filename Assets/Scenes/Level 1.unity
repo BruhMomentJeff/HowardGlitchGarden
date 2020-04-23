@@ -1915,25 +1915,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gravestone
       objectReference: {fileID: 0}
-    - target: {fileID: 5171751950153830116, guid: 51ddd2d4a5ca181409f6a95a769dc495,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.0015838146
-      objectReference: {fileID: 0}
-    - target: {fileID: 5171751950153830116, guid: 51ddd2d4a5ca181409f6a95a769dc495,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.976985
-      objectReference: {fileID: 0}
-    - target: {fileID: 5171751950153830116, guid: 51ddd2d4a5ca181409f6a95a769dc495,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 0.0073246956
-      objectReference: {fileID: 0}
-    - target: {fileID: 5171751950153830116, guid: 51ddd2d4a5ca181409f6a95a769dc495,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.6437893
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51ddd2d4a5ca181409f6a95a769dc495, type: 3}
