@@ -7,6 +7,8 @@ public class Attacker : MonoBehaviour
     [Range (0f, 5f)]
     float fltCurrentSpeed = 1f;
     //The current speed in float format
+    GameObject currentTarget;
+
     void Update()
     {
         transform.Translate(Vector2.left * fltCurrentSpeed * Time.deltaTime);
@@ -17,4 +19,10 @@ public class Attacker : MonoBehaviour
         fltCurrentSpeed = fltSpeed;
     }
 
+    //Sets a true or false to IsAttacking depending on if there's a target in front of them.
+    public void Attack(GameObject target)
+    {
+        GetComponent<Animator>().SetBool("IsAttacking", true);
+        currentTarget = target;
+    }
 }
