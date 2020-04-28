@@ -7,7 +7,7 @@ public class AttackerSpawner : MonoBehaviour
     [SerializeField] float fltminSpawnDelay = 1f;
     //Maximum Delay before spawning
     [SerializeField] float fltmaxSpawnDelay = 5f;
-    [SerializeField] Attacker attackerPrefab;
+    [SerializeField] Attacker[] attackerPrefabArray;
 
     bool boolSpawn = true;
 
@@ -22,17 +22,18 @@ public class AttackerSpawner : MonoBehaviour
     //Spawn Attacker
     private void SpawnAttacker()
     {
+        var attackerIndex = UnityEngine.Random.Range(0, attackerPrefabArray.Length);
+        Spawn(attackerPrefabArray[attackerIndex]);
+    }
+
+    //Detects what to spawn
+    private void Spawn (Attacker myAttacker)
+    {
         //Clarifies the type being spawned
         Attacker newAttacker = Instantiate
-            (attackerPrefab, transform.position, transform.rotation)
+            (myAttacker, transform.position, transform.rotation)
             as Attacker;
         //Clarifies it's X,Y, and even Z axis
         newAttacker.transform.parent = transform;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
