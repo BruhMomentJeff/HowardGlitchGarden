@@ -9,16 +9,21 @@ public class GameTimer : MonoBehaviour
     [Tooltip("Our level timer in Seconds")]
     //Defines how long the fltLevelTime will be in seconds. 
     [SerializeField] float fltLevelTime = 10;
+    //Stops boolLevelTimerFinished from going on once it's finished.
+    bool boolTriggeredLevelFinished = false;
+
 
     // Update is called once per frame
     void Update()
     {
+        if (boolTriggeredLevelFinished) { return; }
         GetComponent<Slider>().value = Time.timeSinceLevelLoad / fltLevelTime;
 
         bool boolTimerFinshed = (Time.timeSinceLevelLoad >= fltLevelTime);
         if(boolTimerFinshed)
         {
-            Debug.Log("Level Time has expired.");
+            FindObjectOfType<LevelController>().boollevelTimerFinished();
+            boolTriggeredLevelFinished = true;
         }
     }
 }

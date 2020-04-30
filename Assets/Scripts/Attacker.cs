@@ -6,8 +6,19 @@ public class Attacker : MonoBehaviour
 {   //Range between minimum to maximum speed
     [Range (0f, 5f)]
     float fltCurrentSpeed = 1f;
-    //The current speed in float format
+    //The current speed in float format ^
     GameObject currentTarget;
+
+    //Exists to make sure everything happens after it.
+    private void Awake()
+    {   //Activates AttackerSpawned
+        FindObjectOfType<LevelController>().AttackerSpawned();
+    }
+
+    private void OnDestroy()
+    {   //Activates AttackerKilled
+        FindObjectOfType<LevelController>().AttackerKilled();
+    }
 
     void Update()
     {

@@ -19,6 +19,12 @@ public class AttackerSpawner : MonoBehaviour
             SpawnAttacker();
         }//Makes the delay for spawning randomized with the range from the Minimum and Maximum delay.
     }
+    
+    public void StopSpawning()
+    {
+        boolSpawn = false;
+    }
+    
     //Spawn Attacker
     private void SpawnAttacker()
     {
