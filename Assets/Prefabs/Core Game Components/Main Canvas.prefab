@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b1e41752eead6340bddae2d035f80a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fltLevelTime: 10
+  fltLevelTime: 3
 --- !u!1 &1199297226
 GameObject:
   m_ObjectHideFlags: 0
