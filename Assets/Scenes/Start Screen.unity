@@ -201,7 +201,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 496723558}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1071883298}
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &496723558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +253,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496723555}
   m_CullTransparentMesh: 0
+--- !u!1001 &1071883297
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3724545098103124889, guid: 30c5b64ff1374f140bf4bc79f8fa02de,
+        type: 3}
+      propertyPath: m_Name
+      value: Level Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768301898211032210, guid: 30c5b64ff1374f140bf4bc79f8fa02de,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768301898211032210, guid: 30c5b64ff1374f140bf4bc79f8fa02de,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768301898211032210, guid: 30c5b64ff1374f140bf4bc79f8fa02de,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768301898211032210, guid: 30c5b64ff1374f140bf4bc79f8fa02de,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768301898211032210, guid: 30c5b64ff1374f140bf4bc79f8fa02de,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768301898211032210, guid: 30c5b64ff1374f140bf4bc79f8fa02de,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768301898211032210, guid: 30c5b64ff1374f140bf4bc79f8fa02de,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768301898211032210, guid: 30c5b64ff1374f140bf4bc79f8fa02de,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768301898211032210, guid: 30c5b64ff1374f140bf4bc79f8fa02de,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768301898211032210, guid: 30c5b64ff1374f140bf4bc79f8fa02de,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768301898211032210, guid: 30c5b64ff1374f140bf4bc79f8fa02de,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 30c5b64ff1374f140bf4bc79f8fa02de, type: 3}
+--- !u!114 &1071883298 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5345445988596824536, guid: 30c5b64ff1374f140bf4bc79f8fa02de,
+    type: 3}
+  m_PrefabInstance: {fileID: 1071883297}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76fa885d2c845f64eb78615e50057b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1584851016
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +711,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2054067268}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1071883298}
+        m_MethodName: LoadNextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2136227250
 GameObject:
   m_ObjectHideFlags: 0

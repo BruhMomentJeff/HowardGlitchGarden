@@ -6,13 +6,16 @@ public class LevelController : MonoBehaviour
 {
     [SerializeField] float fltWaitToLoad = 4f;
     [SerializeField] GameObject winLabel;
+    [SerializeField] GameObject loseLabel;
     //Helps determine how many attackers are remaining
     int intNumberOfAttackers = 0;
     bool boolLevelTimerFinished = false;
 
+    //Turns off Labels at the start.
     private void Start()
     {
         winLabel.SetActive(false);
+        loseLabel.SetActive(false);
     }
 
     //Checks for when an attacker is spawned that it counts up any new attackers
@@ -39,6 +42,14 @@ public class LevelController : MonoBehaviour
         GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(fltWaitToLoad);
         FindObjectOfType<LevelLoader>().LoadNextScene();
+    }
+
+    //Activates loseLabel by setting it to true.
+    public void HandleLoseCondition()
+    {
+        loseLabel.SetActive(true);
+        Time.timeScale = 0;
+
     }
 
     //Checks for when the Level Timer has Finished and stops spawning attacks.

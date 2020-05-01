@@ -25,6 +25,18 @@ public class LevelLoader : MonoBehaviour
         LoadNextScene();
     } //Loads the Next Scene after waiting intTimeToWait amount of seconds.
 
+    public void RestartScene()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(intCurrentSceneIndex);
+    }
+
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Start Screen");
+    }
+
     public void LoadNextScene()
     {
         SceneManager.LoadScene(intCurrentSceneIndex + 1);
@@ -33,5 +45,10 @@ public class LevelLoader : MonoBehaviour
     public void LoadYouLose()
     {
         SceneManager.LoadScene("Lose Screen");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

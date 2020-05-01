@@ -26,10 +26,10 @@ public class LivesDisplay : MonoBehaviour
         intLives -= intDamage;
         UpdateDisplay();
 
-        //
+        //Makes it possible to lose.
         if (intLives <= 0)
         {
-            FindObjectOfType<LevelLoader>().LoadYouLose();
+            FindObjectOfType<LevelController>().HandleLoseCondition();
         }
     }
 }
