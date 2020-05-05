@@ -154,8 +154,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 216474700, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
       propertyPath: fltminSpawnDelay
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 216474700, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
+      propertyPath: fltmaxSpawnDelay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 216474700, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
+      propertyPath: attackerPrefabArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 1707663226}
+    - target: {fileID: 216474700, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
+      propertyPath: attackerPrefabArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 1790370289}
     - target: {fileID: 2574070159617661138, guid: 12cec76ed5f536f49889c4c84638dfff,
         type: 3}
       propertyPath: m_Name
@@ -216,7 +228,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1361229503, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
+    - {fileID: 425306408, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
+    - {fileID: 2065895874, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
+    - {fileID: 738935040, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
 --- !u!1001 &369768023
 PrefabInstance:
@@ -226,9 +242,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 1098425166}
     m_Modifications:
     - target: {fileID: 216474700, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
-      propertyPath: fltminSpawnDelay
-      value: 10
+      propertyPath: attackerPrefabArray.Array.size
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 216474700, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
+      propertyPath: attackerPrefabArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 1790370289}
     - target: {fileID: 2574070159617661138, guid: 12cec76ed5f536f49889c4c84638dfff,
         type: 3}
       propertyPath: m_Name
@@ -306,8 +326,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 216474700, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
       propertyPath: fltminSpawnDelay
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 216474700, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
+      propertyPath: fltmaxSpawnDelay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 216474700, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
+      propertyPath: attackerPrefabArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 1707663226}
+    - target: {fileID: 216474700, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
+      propertyPath: attackerPrefabArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 1790370289}
     - target: {fileID: 2574070159617661138, guid: 12cec76ed5f536f49889c4c84638dfff,
         type: 3}
       propertyPath: m_Name
@@ -368,7 +400,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1361229503, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
+    - {fileID: 425306408, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
+    - {fileID: 2065895874, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
+    - {fileID: 738935040, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
 --- !u!1 &685233466
 GameObject:
@@ -411,9 +447,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 1098425166}
     m_Modifications:
     - target: {fileID: 216474700, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
-      propertyPath: fltminSpawnDelay
-      value: 10
+      propertyPath: attackerPrefabArray.Array.size
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 216474700, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
+      propertyPath: attackerPrefabArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 1707663226}
     - target: {fileID: 2574070159617661138, guid: 12cec76ed5f536f49889c4c84638dfff,
         type: 3}
       propertyPath: m_Name
@@ -685,6 +725,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 904669969482082828}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1707663226 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3229085660576336000, guid: a3503715c3668624ca99d69339f1cdcf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3229085661369959381}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86a2b9f53abd78747a45ab4d0a02cc76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1790370289 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5038961278140627201, guid: 15657df7f67b8d44aadec07cd8b33bcc,
+    type: 3}
+  m_PrefabInstance: {fileID: 933079297}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86a2b9f53abd78747a45ab4d0a02cc76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1869199998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4598831725534674553, guid: 02c9a24570d912b409ed4a8cabd3bac2,
@@ -1350,9 +1414,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 1098425166}
     m_Modifications:
     - target: {fileID: 216474700, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
-      propertyPath: fltminSpawnDelay
-      value: 10
-      objectReference: {fileID: 0}
+      propertyPath: attackerPrefabArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 1707663226}
+    - target: {fileID: 216474700, guid: 12cec76ed5f536f49889c4c84638dfff, type: 3}
+      propertyPath: attackerPrefabArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 1790370289}
     - target: {fileID: 2574070159617661138, guid: 12cec76ed5f536f49889c4c84638dfff,
         type: 3}
       propertyPath: m_Name
