@@ -7,11 +7,14 @@ public class OptionsController : MonoBehaviour
 {
     [SerializeField] Slider volumeSlider;
     [SerializeField] float defaultVolume = 0.8f;
+    [SerializeField] Slider difficultySlider;
+    [SerializeField] float defaultDifficulty = 0f;
 
     //Is utilizing the slider for volume and it's value.
     void Start()
     {
         volumeSlider.value = PlayerPrefsController.GetMasterVolume();
+        difficultySlider.value = PlayerPrefsController.GetDifficulty();
     }
 
     //Allows easy access of Music Player
@@ -31,11 +34,13 @@ public class OptionsController : MonoBehaviour
     public void SaveAndExit()
     {
         PlayerPrefsController.SetMasterVolume(volumeSlider.value);
+        PlayerPrefsController.SetDifficulty(difficultySlider.value);
         FindObjectOfType<LevelLoader>().LoadMainMenu();
     }
     //Upon selecting Defaults, it will revert the slider back to the defaultVolume.
     public void SetDefaults()
     {
         volumeSlider.value = defaultVolume;
+        difficultySlider.value = defaultDifficulty;
     }
 }

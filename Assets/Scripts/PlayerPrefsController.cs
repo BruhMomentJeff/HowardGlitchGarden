@@ -10,6 +10,9 @@ public class PlayerPrefsController : MonoBehaviour
     const float MIN_VOLUME = 0f;
     const float MAX_VOLUME = 1f;
 
+    const float MIN_DIFFICULTY = 0f;
+    const float MAX_DIFFICULTY = 2f;
+
     //Creates our MasterVolume slider with fltvolume with a check and balance of
     //MIN_VOLUME and MAX_VOLUME as it's range
     public static void SetMasterVolume(float volume)
@@ -29,5 +32,22 @@ public class PlayerPrefsController : MonoBehaviour
     {
         return PlayerPrefs.GetFloat(MASTER_VOLUME_KEY);
     }
-
+    
+    //Sets the range for Difficulty's Slider value
+    public static void SetDifficulty(float difficulty)
+    {
+        if (difficulty >= MIN_DIFFICULTY && difficulty <= MAX_DIFFICULTY)
+        {
+            PlayerPrefs.SetFloat(DIFFICULTY_KEY, difficulty);
+        }
+        else
+        {
+            Debug.LogError("Difficulty setting is not in range.");
+        }
+    }
+    //Gets the difficulty and returns it.
+    public static float GetDifficulty()
+    {
+        return PlayerPrefs.GetFloat(DIFFICULTY_KEY);
+    }
 }
