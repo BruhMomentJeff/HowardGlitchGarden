@@ -19,7 +19,7 @@ public class DefenderButton : MonoBehaviour
         Text costText = GetComponentInChildren<Text>();
         if(!costText)
         {
-            Debug.LogError(name + " has no cost text, need some.");
+            //Debug.LogError(name + " has no cost text, need some.");
         }
         else
         {

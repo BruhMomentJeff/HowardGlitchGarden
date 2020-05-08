@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fltSpeed: 2
-  fltDamage: 100
+  fltDamage: 80
 --- !u!95 &5087981424988114961
 Animator:
   serializedVersion: 3
