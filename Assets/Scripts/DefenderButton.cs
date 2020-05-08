@@ -1,12 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DefenderButton : MonoBehaviour
 {
     //Helps you select a specific prefab
     [SerializeField] Defender defenderPrefab;
+    
+    //Labels button with Cost text.
+    private void Start()
+    {
+        LabelButtonWithCost();
+    }
 
+    private void LabelButtonWithCost()
+    {
+        Text costText = GetComponentInChildren<Text>();
+        if(!costText)
+        {
+            Debug.LogError(name + " has no cost text, need some.");
+        }
+        else
+        {
+            costText.text = defenderPrefab.intGetStarCost().ToString();
+        }
+    }
 
     private void OnMouseDown()
     {   //Tries to find DefenderButton using the variable buttons
