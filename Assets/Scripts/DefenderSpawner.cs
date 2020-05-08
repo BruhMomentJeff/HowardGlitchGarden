@@ -5,6 +5,22 @@ using UnityEngine;
 public class DefenderSpawner : MonoBehaviour
 {   
     Defender defender;
+    GameObject defenderParent;
+    const string DEFENDER_PARENT_NAME = "Defenders";
+
+    private void Start()
+    {
+        CreateDefenderParent();
+    }
+
+    private void CreateDefenderParent()
+    {
+        defenderParent = GameObject.Find(DEFENDER_PARENT_NAME);
+        if (!defenderParent)
+        {
+            defenderParent = new GameObject(DEFENDER_PARENT_NAME);
+        }
+    }
 
     //detects when mouse has been clicked and will 'Attempt to place a defender' where clicked based on it's method of an if statement.
     private void OnMouseDown()
@@ -57,6 +73,8 @@ public class DefenderSpawner : MonoBehaviour
     private void SpawnDefender(Vector2 roundedPos)
     {
         Defender newDefender = Instantiate(defender, roundedPos, Quaternion.identity) as Defender;
+        //Makes the newDefender go to it's parents transform cords.
+        newDefender.transform.parent = defenderParent.transform;
     }
 
 }

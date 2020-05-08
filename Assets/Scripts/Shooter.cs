@@ -8,12 +8,25 @@ public class Shooter : MonoBehaviour
     [SerializeField] GameObject projectile, gun;
     AttackerSpawner myLaneSpawner;
     Animator animator;
+    GameObject projectileParent;
+    const string PROJECTILE_PARENT_NAME = "Projectiles";
 
     private void Start()
     {
         SetLaneSpawner();
         //Gets the animator component
         animator = GetComponent<Animator>();
+        //Creates the parent of Projectiles
+        CreateProjectileParent();
+    }
+
+    private void CreateProjectileParent()
+    {
+        projectileParent = GameObject.Find(PROJECTILE_PARENT_NAME);
+        if (!projectileParent)
+        {
+            projectileParent = new GameObject(PROJECTILE_PARENT_NAME);
+        }
     }
 
     //Checks for Attackers in the same lane and changes the 'isAttacking' statement made in the animator, with true or false.
@@ -61,6 +74,9 @@ public class Shooter : MonoBehaviour
    //Fires a projectile/spawns it where instructed by gun's coordinates.
    public void Fire()
     {
-        Instantiate(projectile, gun.transform.position, transform.rotation);
+        GameObject newProjectile =
+            Instantiate(projectile, gun.transform.position, transform.rotation)
+            as GameObject;
+        newProjectile.transform.parent = projectileParent.transform;
     }
 }
